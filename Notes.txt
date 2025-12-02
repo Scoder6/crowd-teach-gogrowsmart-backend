@@ -1,0 +1,25 @@
+If .env LOG_REQUEST=true:
+1. /download-tests downloads a test file created from all requests.
+2. Note: Add }) at the end of the file to close the app module.
+3. In IDE, transfer the file to tests directory.
+4. Perform `npm run test` to run the tests.
+
+For SSL:
+teachnteach.primary.server.inmoto.co.in
+
+sudo ls /etc/letsencrypt/live/teachnteach.primary.server.inmoto.co.in
+sudo nano /etc/letsencrypt/renewal/teachnteach.primary.server.inmoto.co.in
+
+
+pm2 start app.js --name teachnteach_primary_backend
+
+git clone https://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@github.com/subhrangshu/tnt_express_backend.git
+Password Token (Latest): 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
+
+DELETE RAZORPAY ROUTES ACCOUNT:
+curl -u rzp_test_R5gzEMjEBamYIE:iLAabEqDXmNQdnEl3r8qtxPU \
+  -X PATCH "https://api.razorpay.com/v2/accounts/{acc_R5h1J7153GMHn8}" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "active": false
+  }'
